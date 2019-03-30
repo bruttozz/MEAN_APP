@@ -4,4 +4,16 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+  .row
+     .col-md-12
+       p
+        br
+        strong Weather Forecast #{forecast}
+       table.table
+         thead
+           tr
+             th Pressure
+             th Temprature
+             th Humidty
+             th Speed
+         tbody
