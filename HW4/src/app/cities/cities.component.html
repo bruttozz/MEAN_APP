@@ -1,0 +1,24 @@
+<h2>Favorite Cities List</h2>
+<ul class="heroes">
+  <!--  The *ngFor is Angular's repeater directive. It repeats the host element for each element in a list.-->
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.user}} </span> {{hero.city}}
+    </a>
+    <button class="delete" title="delete hero"
+            (click)="delete(hero)">x</button>
+  </li>
+</ul>
+<h4>Add your favorite cites here: </h4>
+<div>
+  <label>
+    User's Name: <input #userName>
+  </label>
+  <label>
+    City: <input #heroName>
+  </label>
+  <button (click)="add(userName.value, heroName.value);">
+    add
+  </button>
+</div>
+<!--Hero Name: <input type="text" name="heroName" ng-model="hero.hero">-->
